@@ -1,0 +1,48 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: "initdb"
+spec:
+  template:
+    metadata:
+      name: "initdb"
+    spec:
+      restartPolicy: Never
+      initContainers:
+        - name: check-db-ready
+          image: postgres:latest
+          env:
+            - name: POSTGRES_HOST
+              value: "postgres"
+            - name: POSTGRES_PORT
+              value: "5432"
+          command:
+            - sh
+            - "-c"
+            - |
+              until pg_isready -h $POSTGRES_HOST  -p  $POSTGRES_PORT;
+              do echo waiting for database; sleep 2; done;
+      containers:
+      - name: initdb
+        env:
+          - name: DATABASE_URI
+            value: "postgresql://myuser:passwd@postgres:5432/myapp"
+        image: postgres:latest
+        command:
+          - sh
+          - "-c"
+          - |
+            psql $DATABASE_URI <<'EOF'
+              drop table if exists users;
+              create table users (
+                id serial primary key,
+                user_name varchar not null unique,
+                first_name varchar not null default '',
+                last_name varchar not null default '',
+                email varchar not null default '',
+                phone varchar not null default ''
+              );
+              insert into users (user_name, first_name, last_name, email, phone)
+                values ('UserName', 'FirstName', 'LastName', 'Email', 'Phone');
+            EOF
+  backoffLimit: 2

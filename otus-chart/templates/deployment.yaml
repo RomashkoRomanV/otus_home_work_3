@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "otus-chart.fullname" . }}
+  labels:
+    {{- include "otus-chart.labels" . | nindent 4 }}
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      {{- include "otus-chart.selectorLabels" . | nindent 6 }}
+  template:
+    metadata:
+      labels:
+        {{- include "otus-chart.selectorLabels" . | nindent 8 }}
+      annotations:
+        checksum/config: {{ include (print $.Template.BasePath "/app-config.yaml") . | sha256sum }}
+    spec:
+      containers:
+      - name: {{ .Chart.Name }}
+        image: {{ .Values.image }}
+        envFrom:
+          - configMapRef:
+             name: otus-config 
+          - secretRef:
+             name: otus-secret
+        ports:
+          - name: web
+            containerPort: 80
+        livenessProbe:
+          httpGet:
+            port: 80
+            path: /
+          initialDelaySeconds: 10
+          periodSeconds: 5
+          timeoutSeconds: 1
+        readinessProbe:
+          httpGet:
+            port: 80
+            path: /health
+          initialDelaySeconds: 10
+          periodSeconds: 5

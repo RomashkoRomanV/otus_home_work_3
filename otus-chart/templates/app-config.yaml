@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: otus-config
+data:
+  GREETING: Bonjour
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: otus-secret
+type: Opaque
+data:
+  DATABASE_URI: {{ printf "postgresql+psycopg2://%s:%s@%s:%s/%s" .Values.postgresql.postgresqlUsername .Values.postgresql.postgresqlPassword .Values.postgresql.service.host .Values.postgresql.service.port .Values.postgresql.postgresqlDatabase  | b64enc | quote }}
