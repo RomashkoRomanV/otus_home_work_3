@@ -1,7 +1,7 @@
 {
-	"id": "8a98041a-8cc9-4e57-a638-6eb736ff4f6a",
+	"id": "8a17d0fb-a4c4-453b-955d-83e072518af8",
 	"name": "OTUS-HomeWork3",
-	"timestamp": "2022-11-21T09:55:58.518Z",
+	"timestamp": "2022-11-21T11:01:41.857Z",
 	"collection_id": "24396906-838d44a3-8aee-43ed-a0ba-a9f365796bb8",
 	"folder_id": 0,
 	"environment_id": "0",
@@ -11,8 +11,8 @@
 		{
 			"id": "6b377e42-5da4-41af-a98d-e1ee66141cbf",
 			"name": "Dump DB",
-			"url": "http://192.168.49.2/otusapp/db",
-			"time": 24,
+			"url": "http://arch.homework/otusapp/db",
+			"time": 11,
 			"responseCode": {
 				"code": 200,
 				"name": "OK"
@@ -27,7 +27,7 @@
 				}
 			},
 			"times": [
-				24
+				11
 			],
 			"allTests": [
 				{
@@ -38,8 +38,8 @@
 		{
 			"id": "fe66703b-20b6-4b6e-8095-5e852c3ac617",
 			"name": "Get user",
-			"url": "http://192.168.49.2/otusapp/user/1",
-			"time": 13,
+			"url": "http://arch.homework/otusapp/user/1",
+			"time": 12,
 			"responseCode": {
 				"code": 200,
 				"name": "OK"
@@ -54,7 +54,7 @@
 				}
 			},
 			"times": [
-				13
+				12
 			],
 			"allTests": [
 				{
@@ -65,8 +65,8 @@
 		{
 			"id": "2fc430d7-9ba7-4cbb-9b47-5695aa3188e7",
 			"name": "Create user",
-			"url": "http://192.168.49.2/otusapp/user",
-			"time": 54,
+			"url": "http://arch.homework/otusapp/user",
+			"time": 9,
 			"responseCode": {
 				"code": 200,
 				"name": "OK"
@@ -81,7 +81,7 @@
 				}
 			},
 			"times": [
-				54
+				9
 			],
 			"allTests": [
 				{
@@ -92,8 +92,8 @@
 		{
 			"id": "bce1a4e2-98ac-4581-8b6b-0eca921d4a4b",
 			"name": "Update user",
-			"url": "http://192.168.49.2/otusapp/user/1",
-			"time": 19,
+			"url": "http://arch.homework/otusapp/user/1",
+			"time": 12,
 			"responseCode": {
 				"code": 200,
 				"name": "OK"
@@ -108,7 +108,7 @@
 				}
 			},
 			"times": [
-				19
+				12
 			],
 			"allTests": [
 				{
@@ -119,8 +119,8 @@
 		{
 			"id": "6b6e85d9-cece-4cb4-89a8-a613acb8f37c",
 			"name": "Delete user",
-			"url": "http://192.168.49.2/otusapp/user/1",
-			"time": 25,
+			"url": "http://arch.homework/otusapp/user/1",
+			"time": 9,
 			"responseCode": {
 				"code": 200,
 				"name": "OK"
@@ -135,7 +135,7 @@
 				}
 			},
 			"times": [
-				25
+				9
 			],
 			"allTests": [
 				{
@@ -145,7 +145,7 @@
 		}
 	],
 	"count": 1,
-	"totalTime": 135,
+	"totalTime": 53,
 	"collection": {
 		"requests": [
 			{

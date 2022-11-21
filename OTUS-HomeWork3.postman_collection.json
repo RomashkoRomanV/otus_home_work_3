@@ -25,24 +25,17 @@
 				"method": "GET",
 				"header": [
 					{
-						"key": "Host",
-						"value": "arch.homework",
-						"type": "text"
-					},
-					{
 						"key": "Content-Type",
 						"value": "application/json",
 						"type": "text"
 					}
 				],
 				"url": {
-					"raw": "http://192.168.49.2/otusapp/db",
+					"raw": "http://arch.homework/otusapp/db",
 					"protocol": "http",
 					"host": [
-						"192",
-						"168",
-						"49",
-						"2"
+						"arch",
+						"homework"
 					],
 					"path": [
 						"otusapp",
@@ -71,24 +64,17 @@
 				"method": "GET",
 				"header": [
 					{
-						"key": "Host",
-						"value": "arch.homework",
-						"type": "text"
-					},
-					{
 						"key": "Content-Type",
 						"value": "application/json",
 						"type": "text"
 					}
 				],
 				"url": {
-					"raw": "http://192.168.49.2/otusapp/user/1",
+					"raw": "http://arch.homework/otusapp/user/1",
 					"protocol": "http",
 					"host": [
-						"192",
-						"168",
-						"49",
-						"2"
+						"arch",
+						"homework"
 					],
 					"path": [
 						"otusapp",
@@ -118,11 +104,6 @@
 				"method": "POST",
 				"header": [
 					{
-						"key": "Host",
-						"value": "arch.homework",
-						"type": "text"
-					},
-					{
 						"key": "Content-Type",
 						"value": "application/json",
 						"type": "text"
@@ -138,13 +119,11 @@
 					}
 				},
 				"url": {
-					"raw": "http://192.168.49.2/otusapp/user",
+					"raw": "http://arch.homework/otusapp/user",
 					"protocol": "http",
 					"host": [
-						"192",
-						"168",
-						"49",
-						"2"
+						"arch",
+						"homework"
 					],
 					"path": [
 						"otusapp",
@@ -173,11 +152,6 @@
 				"method": "PUT",
 				"header": [
 					{
-						"key": "Host",
-						"value": "arch.homework",
-						"type": "text"
-					},
-					{
 						"key": "Content-Type",
 						"value": "application/json",
 						"type": "text"
@@ -188,13 +162,11 @@
 					"raw": "{\n    \"userName\": \"TestUser1\",\n    \"firstName\": \"FirstName1\",\n    \"lastName\": \"LastName1\",\n    \"email\": \"user21@domain.root\",\n    \"phone\": \"+22222222222\"\n}"
 				},
 				"url": {
-					"raw": "http://192.168.49.2/otusapp/user/1",
+					"raw": "http://arch.homework/otusapp/user/1",
 					"protocol": "http",
 					"host": [
-						"192",
-						"168",
-						"49",
-						"2"
+						"arch",
+						"homework"
 					],
 					"path": [
 						"otusapp",
@@ -224,24 +196,17 @@
 				"method": "DELETE",
 				"header": [
 					{
-						"key": "Host",
-						"value": "arch.homework",
-						"type": "text"
-					},
-					{
 						"key": "Content-Type",
 						"value": "application/json",
 						"type": "text"
 					}
 				],
 				"url": {
-					"raw": "http://192.168.49.2/otusapp/user/1",
+					"raw": "http://arch.homework/otusapp/user/1",
 					"protocol": "http",
 					"host": [
-						"192",
-						"168",
-						"49",
-						"2"
+						"arch",
+						"homework"
 					],
 					"path": [
 						"otusapp",
