@@ -1,0 +1,173 @@
+{
+	"id": "8a98041a-8cc9-4e57-a638-6eb736ff4f6a",
+	"name": "OTUS-HomeWork3",
+	"timestamp": "2022-11-21T09:55:58.518Z",
+	"collection_id": "24396906-838d44a3-8aee-43ed-a0ba-a9f365796bb8",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 5,
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "6b377e42-5da4-41af-a98d-e1ee66141cbf",
+			"name": "Dump DB",
+			"url": "http://192.168.49.2/otusapp/db",
+			"time": 24,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				24
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "fe66703b-20b6-4b6e-8095-5e852c3ac617",
+			"name": "Get user",
+			"url": "http://192.168.49.2/otusapp/user/1",
+			"time": 13,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				13
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "2fc430d7-9ba7-4cbb-9b47-5695aa3188e7",
+			"name": "Create user",
+			"url": "http://192.168.49.2/otusapp/user",
+			"time": 54,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				54
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "bce1a4e2-98ac-4581-8b6b-0eca921d4a4b",
+			"name": "Update user",
+			"url": "http://192.168.49.2/otusapp/user/1",
+			"time": 19,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				19
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "6b6e85d9-cece-4cb4-89a8-a613acb8f37c",
+			"name": "Delete user",
+			"url": "http://192.168.49.2/otusapp/user/1",
+			"time": 25,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				25
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 135,
+	"collection": {
+		"requests": [
+			{
+				"id": "6b377e42-5da4-41af-a98d-e1ee66141cbf",
+				"method": "GET"
+			},
+			{
+				"id": "fe66703b-20b6-4b6e-8095-5e852c3ac617",
+				"method": "GET"
+			},
+			{
+				"id": "2fc430d7-9ba7-4cbb-9b47-5695aa3188e7",
+				"method": "POST"
+			},
+			{
+				"id": "bce1a4e2-98ac-4581-8b6b-0eca921d4a4b",
+				"method": "PUT"
+			},
+			{
+				"id": "6b6e85d9-cece-4cb4-89a8-a613acb8f37c",
+				"method": "DELETE"
+			}
+		]
+	}
+}

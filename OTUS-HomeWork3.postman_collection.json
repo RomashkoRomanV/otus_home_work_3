@@ -1,0 +1,301 @@
+{
+	"info": {
+		"_postman_id": "838d44a3-8aee-43ed-a0ba-a9f365796bb8",
+		"name": "OTUS-HomeWork3",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24396906"
+	},
+	"item": [
+		{
+			"name": "Dump DB",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Host",
+						"value": "arch.homework",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://192.168.49.2/otusapp/db",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"49",
+						"2"
+					],
+					"path": [
+						"otusapp",
+						"db"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get user",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Host",
+						"value": "arch.homework",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://192.168.49.2/otusapp/user/1",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"49",
+						"2"
+					],
+					"path": [
+						"otusapp",
+						"user",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create user",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Host",
+						"value": "arch.homework",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userName\": \"TestUser\",\r\n    \"firstName\": \"FirstName\",\r\n    \"lastName\": \"LastName\",\r\n    \"email\": \"user2@domain.root\",\r\n    \"phone\": \"+11231231212\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://192.168.49.2/otusapp/user",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"49",
+						"2"
+					],
+					"path": [
+						"otusapp",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update user",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Host",
+						"value": "arch.homework",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userName\": \"TestUser1\",\n    \"firstName\": \"FirstName1\",\n    \"lastName\": \"LastName1\",\n    \"email\": \"user21@domain.root\",\n    \"phone\": \"+22222222222\"\n}"
+				},
+				"url": {
+					"raw": "http://192.168.49.2/otusapp/user/1",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"49",
+						"2"
+					],
+					"path": [
+						"otusapp",
+						"user",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete user",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Host",
+						"value": "arch.homework",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://192.168.49.2/otusapp/user/1",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"49",
+						"2"
+					],
+					"path": [
+						"otusapp",
+						"user",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "oauth1",
+		"oauth1": [
+			{
+				"key": "addParamsToHeader",
+				"value": false,
+				"type": "boolean"
+			},
+			{
+				"key": "signatureMethod",
+				"value": "HMAC-SHA1",
+				"type": "string"
+			},
+			{
+				"key": "version",
+				"value": "1.0",
+				"type": "string"
+			},
+			{
+				"key": "addEmptyParamsToSign",
+				"value": false,
+				"type": "boolean"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
